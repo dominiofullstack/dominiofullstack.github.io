@@ -3,6 +3,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 a {
@@ -14,7 +15,11 @@ ul {
 }
 
 .nav {
+    align-items: center;
     background-color: royalblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
     padding: 15px;
 }
 
