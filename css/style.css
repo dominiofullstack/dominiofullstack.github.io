@@ -20,9 +20,17 @@ ul {
     color: white;
     display: flex;
     justify-content: space-between;
+}
+
+.nav h1 {
     padding: 15px;
 }
 
 .nav a {
     color: white;
+    padding: 15px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
 }
