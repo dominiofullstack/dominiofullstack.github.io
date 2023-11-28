@@ -22,7 +22,7 @@ ul {
     justify-content: space-between;
 }
 
-.nav h1 {
+.nav .brand {
     padding: 15px;
 }
 
