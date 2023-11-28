@@ -2,3 +2,11 @@
     padding: 100px 0;
     text-align: center;
 }
+
+.header .title {
+    font-size: 22px;
+}
+
+.header .subtitle {
+    color: rgb(66, 66, 66);
+}
