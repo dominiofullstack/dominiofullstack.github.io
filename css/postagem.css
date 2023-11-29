@@ -1,3 +1,7 @@
+.postagem {
+    line-height: 28px;
+}
+
 .postagem .title {
     font-size: 18px;
 }
@@ -9,4 +13,8 @@
 .postagem .subtitulo, 
 .postagem .data {
     color: rgb(66, 66, 66);
+}
+
+.postagem .cta {
+    color: black;
 }
