@@ -18,7 +18,8 @@
     color: rgb(66, 66, 66);
 }
 
-.postagem .capa {
+.postagem .capa,
+.postagem .capa img {
     width: 150px;
     height: 150px;
 }
