@@ -1,6 +1,8 @@
 .postagem {
+    align-items: center;
     display: flex;
-    line-height: 28px;
+    gap: 25px;
+    padding: 25px 0;
 }
 
 .postagem .title {
@@ -14,4 +16,8 @@
 .postagem .subtitulo, 
 .postagem .data {
     color: rgb(66, 66, 66);
+}
+
+.postagem .capa img {
+    width: 150px;
 }
