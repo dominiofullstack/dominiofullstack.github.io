@@ -15,3 +15,8 @@
     width: 150px;
     height: 150px;
 }
+
+.legenda-postagem {
+    display: flex;
+    gap: 5px;
+}
