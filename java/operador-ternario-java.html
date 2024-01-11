@@ -58,8 +58,7 @@
                 <p>O resultado do operador ternário normalmente é armazenado em uma variável como no seguinte exemplo:</p>
                 <pre><code>String status = (idade >= 18) ? "Pode votar" : "Não pode votar";</code></pre>
                 <p>Também pode ser usado no retorno de uma função por exemplo:</p>
-<pre><code>
-public String verificarStatus(int idade) {
+<pre><code>public String verificarStatus(int idade) {
     return (idade >= 18) ? "Pode votar" : "Não pode votar";
 }
 </code></pre>
@@ -74,8 +73,7 @@ public String verificarStatus(int idade) {
                 <p>Nesse caso o aluno vai estar em recuperação quando sua nota média estiver entre 5 e 6.</p>
                 <p>Nesse cenário o Operador Ternário também resolve nosso problema, mas ele torna o código mais confuso.</p>
                 <p>Em casos como esse onde há mais condições e possíveis resultados eu sugiro o uso de estruturas condicionais convencionais.</p>
-<pre><code>
-if (media >= 6) {
+<pre><code>if (media >= 6) {
     return "Aprovado";
 } else if (media >= 5) {
     return "Recuperação";
