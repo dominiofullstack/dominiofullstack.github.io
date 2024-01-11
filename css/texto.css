@@ -15,6 +15,16 @@
     margin-top: 0;
 }
 
+.conteudo-postagem pre {
+    border: none;
+    margin-bottom: 20px;
+    background-color: #2b2b2b;
+    display: block;
+    font-size: 87.5%;
+    color: #212529;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
 .titulo-principal {
     font-size: 3.5rem;
 }
