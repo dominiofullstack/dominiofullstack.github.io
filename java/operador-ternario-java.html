@@ -42,7 +42,9 @@
                 <p>Em situações também onde é necessário que uma função retorne um valor baseado em uma condição o Operador Ternário pode ajudar.</p>
                 
                 <h3>Sintaxe do Operador Ternário</h3>
-                <code>condição ? expressão1 : expressão2</code>
+                <pre>
+                    <code>condição ? expressão1 : expressão2</code>
+                </pre>
                 <p>Podemos dividir a estrutura do Operador Ternário em três partes.</p>
                 <p>A primeira parte representa a condição que será usada para ele decidir qual valor deve retornar.</p>
                 <p>Entre a primeira e a segunda parte é necessário colocar o símbolo de interrogação (?) que faz parte da estrutura.</p>
@@ -51,38 +53,50 @@
                 <p>A terceira parte representa o valor que vai ser retornado sempre que a condição não for atendida.</p>
 
                 <h3>Exemplos</h3>
-                <code>(idade >= 18) ? "Pode votar" : "Não pode votar"</code>
+                <pre>
+                    <code>(idade >= 18) ? "Pode votar" : "Não pode votar"</code>
+                </pre>
                 <p>Nesse exemplo a condição é que a idade seja maior ou igual a dezoito (idade >= 18).</p>
                 <p>Sempre que a condição for atendida, ou seja, sempre que a idade for maior ou igual a dezoito, o resultado será o texto "Pode votar".</p>
                 <p>Sempre que a condição não for atendida, no caso quando a idade for menor que dezoito, o resultado vai ser o texto "Não pode votar".</p>
                 <p>O resultado do operador ternário normalmente é armazenado em uma variável como no seguinte exemplo:</p>
-                <code>String status = (idade >= 18) ? "Pode votar" : "Não pode votar";</code>
+                <pre>
+                    <code>String status = (idade >= 18) ? "Pode votar" : "Não pode votar";</code>
+                </pre>
                 <p>Também pode ser usado no retorno de uma função por exemplo:</p>
-                <code>
-                    public String verificarStatus(int idade) {
-                        return (idade >= 18) ? "Pode votar" : "Não pode votar";
-                    }
-                </code>
+                <pre>
+                    <code>
+                        public String verificarStatus(int idade) {
+                            return (idade >= 18) ? "Pode votar" : "Não pode votar";
+                        }
+                    </code>
+                </pre>
 
                 <h3>Casos em que não indico o uso do Operador Ternário</h3>
                 <p>Eu não indico o uso do operador ternário quando você ter mais de uma condição que deve ser validada para chegar à um resultado.</p>
                 <p>Por exemplo, no caso onde quero validar se o aluno foi aprovado ou reprovado, nesse caso ele vai ser aprovado se a nota é maior ou igual à 6, caso contrário é reprovado.</p>
                 <p>Nesse cenário onde há apenar um condição eu indico o uso do Operador Ternário.</p>
-                <code>(media >= 6.0) ? "Aprovado" : "Reprovado"</code>
+                <pre>
+                    <code>(media >= 6.0) ? "Aprovado" : "Reprovado"</code>
+                </pre>
                 <p>Mas caso exista mais uma validação para verificar se o aluno está em recuperaçã o uso do operador ternário passa a ficar mais complexo.</p>
-                <code>(media >= 6) ? "Aprovado" : (media >= 5) ? "Recuperação" : "Reprovador"</code>
+                <pre>
+                    <code>(media >= 6) ? "Aprovado" : (media >= 5) ? "Recuperação" : "Reprovador"</code>
+                </pre>
                 <p>Nesse caso o aluno vai estar em recuperação quando sua nota média estiver entre 5 e 6.</p>
                 <p>Nesse cenário o Operador Ternário também resolve nosso problema, mas ele torna o código mais confuso.</p>
                 <p>Em casos como esse onde há mais condições e possíveis resultados eu sugiro o uso de estruturas condicionais convencionais.</p>
-                <code>
-                    if (media >= 6) {
-                        return "Aprovado";
-                    } else if (media >= 5) {
-                        return "Recuperação";
-                    } else {
-                        return "Reprovado";
-                    }
-                </code>
+                <pre>
+                    <code>
+                        if (media >= 6) {
+                            return "Aprovado";
+                        } else if (media >= 5) {
+                            return "Recuperação";
+                        } else {
+                            return "Reprovado";
+                        }
+                    </code>
+                </pre>
             </section>
         </div>
     </main>
