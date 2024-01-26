@@ -37,42 +37,41 @@
                 </div>
             </header>
             <section class="conteudo conteudo-postagem">
-                <h3>Onde eu indico o uso do Operador Ternário</h3>
-                <p>Eu indico o uso do Operador Ternário sempre que é necessário atribuir um valor em uma variável baseado em uma condição.</p>
-                <p>Em situações também onde é necessário que uma função retorne um valor baseado em uma condição o Operador Ternário pode ajudar.</p>
+                <h3>O que é?</h3>
+                <p>É uma nova funcionalidade do Java que está disponível a partir da versão 15.</p>
+                <p>Essa funcionalidade permite a criação de blocos de texto com mais de uma linha de forma mais eficiente.</p>
                 
-                <h3>Sintaxe do Operador Ternário</h3>
-                <pre><code>condição ? expressão1 : expressão2</code></pre>
-                <p>Podemos dividir a estrutura do Operador Ternário em três partes.</p>
-                <p>A primeira parte representa a condição que será usada para ele decidir qual valor deve retornar.</p>
-                <p>Entre a primeira e a segunda parte é necessário colocar o símbolo de interrogação (?) que faz parte da estrutura.</p>
-                <p>A segunda parte representa o valor que vai ser retornado sempre que a condição for atendida.</p>
-                <p>Entre a primeira e a segunda parte é necessário colocar o símbolo de dois pontos (:) que faz parte da estrutura.</p>
-                <p>A terceira parte representa o valor que vai ser retornado sempre que a condição não for atendida.</p>
-
-                <h3>Exemplos</h3>
-                <pre><code>(idade >= 18) ? "Pode votar" : "Não pode votar"</code></pre>
-                <p>Nesse exemplo a condição é que a idade seja maior ou igual a dezoito (idade >= 18).</p>
-                <p>Sempre que a condição for atendida, ou seja, sempre que a idade for maior ou igual a dezoito, o resultado será o texto "Pode votar".</p>
-                <p>Sempre que a condição não for atendida, no caso quando a idade for menor que dezoito, o resultado vai ser o texto "Não pode votar".</p>
-                <p>O resultado do operador ternário normalmente é armazenado em uma variável como no seguinte exemplo:</p>
-                <pre><code>String status = (idade >= 18) ? "Pode votar" : "Não pode votar";</code></pre>
-                <p>Também pode ser usado no retorno de uma função por exemplo:</p>
-<pre><code>public String verificarStatus(int idade) {
-    return (idade >= 18) ? "Pode votar" : "Não pode votar";
-}
+                <h3>Como era feito antes</h3>
+                <p>Nas versões anteriores você conseguia criar blocos de texto com muitas linhas concatenando cada linha e nos locais onde havia a quebra da linha era necessário usar comandos como o "\n".</p>
+<pre><code>String query = "SELECT " +
+"    df.ID_DOCUMENTO_FINANCEIRO, " +
+"    df.NUMERO_DOCUMENTO, " +
+"    df.DATA_VENCIMENTO, " +
+"    df.VALOR_FATURA " +
+"FROM " +
+"    DOCUMENTO_FINANCEIRO df " +
+"WHERE " +
+"    df.TIPO_DOCUMENTO_FINANCEIRO = 'CARTAO' " +
+"    AND df.NUMERO_DOCUMENTO = 1045 ";
 </code></pre>
+                <p>Nesse exemplo temos uma consulta SQL escrita no Java, ela é basicamento um bloco de texto que é armazenado na variável chamada query.</p>
+                <p>Note que para deixar o texto de uma forma fácil de ler e identado foi necessário concatenar cada linha, também foi necessário ter o cuidade de colocar um espaço ao final de cada linha, caso contrário o resultado seria uma linha grudada na outra.</p>
 
-                <h3>Casos em que não indico o uso do Operador Ternário</h3>
-                <p>Eu não indico o uso do operador ternário quando você ter mais de uma condição que deve ser validada para chegar à um resultado.</p>
-                <p>Por exemplo, no caso onde quero validar se o aluno foi aprovado ou reprovado, nesse caso ele vai ser aprovado se a nota é maior ou igual à 6, caso contrário é reprovado.</p>
-                <p>Nesse cenário onde há apenar um condição eu indico o uso do Operador Ternário.</p>
-                <pre><code>(media >= 6.0) ? "Aprovado" : "Reprovado"</code></pre>
-                <p>Mas caso exista mais uma validação para verificar se o aluno está em recuperaçã o uso do operador ternário passa a ficar mais complexo.</p>
-                <pre><code>(media >= 6) ? "Aprovado" : (media >= 5) ? "Recuperação" : "Reprovador"</code></pre>
-                <p>Nesse caso o aluno vai estar em recuperação quando sua nota média estiver entre 5 e 6.</p>
-                <p>Nesse cenário o Operador Ternário também resolve nosso problema, mas ele torna o código mais confuso.</p>
-                <p>Em casos como esse onde há mais condições e possíveis resultados eu sugiro o uso de estruturas condicionais convencionais.</p>
+                <h3>Como pode ser feito agora</h3>
+                <p>Com a utilização dos blocos de texto do Java 15 podemos fazer da seguinte forma.</p>
+<pre><code>String query = """
+SELECT
+    df.ID_DOCUMENTO_FINANCEIRO,
+    df.NUMERO_DOCUMENTO,
+    df.DATA_VENCIMENTO,
+    df.VALOR_FATURA
+FROM
+    DOCUMENTO_FINANCEIRO df
+WHERE
+    df.TIPO_DOCUMENTO_FINANCEIRO = 'CARTAO'
+    AND df.NUMERO_DOCUMENTO = 1045 """;
+</code></pre>
+                <p></p>
 <pre><code>if (media >= 6) {
     return "Aprovado";
 } else if (media >= 5) {
