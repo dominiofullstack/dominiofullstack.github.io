@@ -56,6 +56,7 @@
 </code></pre>
                 <p>Nesse exemplo temos uma consulta SQL escrita no Java, ela é basicamento um bloco de texto que é armazenado na variável chamada query.</p>
                 <p>Note que para deixar o texto de uma forma fácil de ler e identado foi necessário concatenar cada linha, também foi necessário ter o cuidade de colocar um espaço ao final de cada linha, caso contrário o resultado seria uma linha grudada na outra.</p>
+                <p>Se imprimir o conteúdo dessa variável no console vamos ver o texto todo em apenas uma linha já que não usamos o comando "\n" para especificar a quebra de linha.</p>
 
                 <h3>Como pode ser feito agora</h3>
                 <p>Com a utilização dos blocos de texto do Java 15 podemos fazer da seguinte forma.</p>
@@ -71,6 +72,8 @@ WHERE
     df.TIPO_DOCUMENTO_FINANCEIRO = 'CARTAO'
     AND df.NUMERO_DOCUMENTO = 1045 """;
 </code></pre>
+                <p>Para usar a funcionalidade de bloco de texto do Java é necessário colocar três aspas para abrir o bloco de texto e três aspas para fecha-lo.</p>
+                <p>Se imprimir o conteúdo da variável no console vamos ver que o texto é impresso formatado com quebras de linha exatamente como foi escrito no bloco de texto.</p>
                 <p>Com a utilização do bloco de texto do Java 15 a escrita e a manutenção de um bloco de texto se torna muito mais fácil.</p>
             </section>
         </div>
